@@ -8,29 +8,44 @@ html {
 	}
 
 .container {
-	max-width: 1440px;
+	max-width: 1260px;
 	margin: 0 auto;
 	}
 
 .col-left {width: 60%;}
 .col-right {width: 40%;}
+@media only screen and (max-width: 470px) {
+	.col-left, 
+	.col-right {width: 100%;}
+	}
 
 .uppercase {text-transform: uppercase;}
 .bold {font-weight: 900;}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
-	line-height: 6rem;
+	line-height: 1.2;
 	}
 h1 {
 	font-size: 6rem;
 	margin-bottom: 2rem;
 	font-weight: 900;
 	}
+h2 {
+	font-size: 4rem;
+	font-weight: 900;
+	margin-bottom: 3rem;
+
+	}
+h3 {
+	font-size: 3rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	}
 
 p {
 	font-size: 2rem;
-	line-height: 4rem;
+	line-height: 1.5;
 	}
 
 button {
@@ -45,7 +60,19 @@ button {
 	outline: none;
 	}
 	button:hover {background-color: rgb(56, 182, 238);}
+	button:active {background-color: rgb(17,144,200);}
 
+@media only screen and (min-width: 768px) {
+	.desktop-hide {display: none;}
+	}
+
+@media only screen and (max-width: 767px) {
+	.tablet-hide {display: none;}
+	}
+
+@media only screen and (max-width: 470px) {
+	.mobile-hide {display: none;}
+	}
 
 /* ====================================== */
 /* ================ HEADING ============= */
@@ -139,7 +166,94 @@ nav.mobile {
 			font-size: 3rem;
 			font-weight: 500;
 			}
-@media only screen and (width: 470px) {
+@media only screen and (max-width: 470px) {
 
 }
 
+/* ====================================== */
+/* ============ INFORMATION ============= */
+/* ====================================== */
+.information {
+	display: flex;
+	}
+
+	.information .main {
+		padding: 4rem 3rem;
+		}
+		.information .main .image-container {
+			margin-bottom: 4rem;
+			}
+		.information .main img {
+			max-width: 100%;
+			}
+		.information .main p {
+			margin-bottom: 3rem;
+			}
+
+	.information article {
+		display: flex;
+		align-items: center;
+		padding: 2rem;
+		}
+		.information article:first-child {
+			padding-top: 4rem;
+			}
+		.information article:last-child {
+			background-color: rgb(216,216,216);
+			}
+		.information article .image-container {
+			margin-right: 2rem;
+			width: 35%;
+			}
+			.information article .image-container.guest {
+				background-image: url('../images/information-guest-lecture-mobile.jpg');
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				padding-bottom: 35%;
+				}
+			.article-img {
+				max-width: 100%;
+				}
+		.information article .details {
+			width: 65%;
+			}
+		.information article .cta,
+		.information article p {
+			margin-bottom: 1rem;
+			}
+		.information article a {
+			color: rgb(56, 182, 238);
+			text-decoration: none;
+			transition: color 100ms ease-in;
+			}
+			.information article a:hover {
+				color: rgb(17, 144, 200);
+				}
+	
+@media only screen and (max-width: 470px) {
+	.information article {
+		flex-direction: column;
+		padding: 0 2rem 2rem 2rem;
+		}
+		.information article:first-child {
+			padding-top: 2rem;
+			}
+		.information article:last-child {
+			background-color: rgb(255, 255, 255);
+			}
+		.information article .image-container {
+			margin: 0;
+			width: 100%;
+			}
+		.information article .details {
+			width: 100%;
+			/* padding: 2rem 0; */
+			}
+			.information article .cta {
+			margin-bottom: 0;
+			}
+		/* YOU STOPPED HERE */
+		/* Which is better, background image or img tag? */
+	}
+	
