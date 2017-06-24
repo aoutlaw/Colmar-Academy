@@ -50,7 +50,7 @@ p {
 
 button {
 	margin: 3rem 0;
-	padding: 1rem 10rem;
+	padding: 1rem 4rem;
 	background-color: rgb(74, 74, 74);
 	color: rgb(255, 255, 255);
 	font-size: 2rem;
@@ -141,33 +141,51 @@ nav.mobile {
 /* ================ HERO ================ */
 /* ====================================== */
 .hero {
-	padding: 4rem;
 	background-color: rgb(216,216,216);
+	display: flex;
 	}
-	.hero .container {
-		display: flex;
-		}
 
 .hero-image {
-	background-image: url('../images/banner.jpg');
-	background-size: cover;
-	height: 60rem;
-	margin-right: 2.5rem;
+	padding: 4rem 2.5rem 4rem 3rem;
 	}
+	.hero-image img {
+		max-width: 100%;
+		}
 
 .hero .col-right {
 	display: flex;
 	align-items: center;
 	}
-	.message {
-		margin-left: 2.5rem;
+	.hero .message {
+		padding: 4rem 3rem 4rem 2.5rem;
 		}
-		.message p {
+		.hero .message p {
 			font-size: 3rem;
 			font-weight: 500;
 			}
-@media only screen and (max-width: 470px) {
+@media only screen and (max-width: 767px) {
+	.hero .message h1 {
+		font-size:  5rem;
+		}
+	.hero .message p {
+		font-size: 2rem;
+		}
+	}
 
+@media only screen and (max-width: 470px) {
+	.hero {
+		flex-direction: column;
+		}
+		.hero .hero-image {
+			padding: 0;
+			}
+		.hero .message {
+			padding: 4rem 2rem;
+			}
+		.hero button {
+			width: 100%;
+			padding: 2rem;
+			}
 }
 
 /* ====================================== */
