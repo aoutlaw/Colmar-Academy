@@ -11,9 +11,11 @@ html {
 	max-width: 1260px;
 	margin: 0 auto;
 	}
+.flex {display: flex;}
 
 .col-left {width: 60%;}
 .col-right {width: 40%;}
+/*********** MOBILE SPECIFIC ***********/
 @media only screen and (max-width: 470px) {
 	.col-left, 
 	.col-right {width: 100%;}
@@ -62,14 +64,17 @@ button {
 	button:hover {background-color: rgb(56, 182, 238);}
 	button:active {background-color: rgb(17,144,200);}
 
+/*********** DESKTOP SPECIFIC ***********/
 @media only screen and (min-width: 768px) {
 	.desktop-hide {display: none;}
 	}
 
+/*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
 	.tablet-hide {display: none;}
 	}
 
+/*********** MOBILE SPECIFIC ***********/
 @media only screen and (max-width: 470px) {
 	.mobile-hide {display: none;}
 	}
@@ -111,9 +116,7 @@ nav a {
 	}
 	nav a:hover {color: rgb(56, 182, 238);}
 
-nav img {
-	height: 4rem;
-	}
+nav img {height: 4rem;}
 
 nav.mobile {
 	display: none;
@@ -156,32 +159,23 @@ nav.mobile {
 	display: flex;
 	align-items: center;
 	}
-	.hero .message {
-		padding: 4rem 3rem 4rem 2.5rem;
-		}
+	.hero .message {padding: 4rem 3rem 4rem 2.5rem;}
 		.hero .message p {
 			font-size: 3rem;
 			font-weight: 500;
 			}
+
+/*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
-	.hero .message h1 {
-		font-size:  5rem;
-		}
-	.hero .message p {
-		font-size: 2rem;
-		}
+	.hero .message h1 {font-size:  5rem;}
+	.hero .message p {font-size: 2rem;}
 	}
 
+/*********** MOBILE SPECIFIC ***********/
 @media only screen and (max-width: 470px) {
-	.hero {
-		flex-direction: column;
-		}
-		.hero .hero-image {
-			padding: 0;
-			}
-		.hero .message {
-			padding: 4rem 2rem;
-			}
+	.hero {flex-direction: column;}
+		.hero .hero-image {padding: 0;}
+		.hero .message {padding: 4rem 2rem;}
 		.hero button {
 			width: 100%;
 			padding: 2rem;
@@ -191,137 +185,131 @@ nav.mobile {
 /* ====================================== */
 /* ============ INFORMATION ============= */
 /* ====================================== */
-.information {
-	display: flex;
-	}
-
-	.information .main {
-		padding: 4rem 3rem;
-		}
-		.information .main .image-container {
-			margin-bottom: 4rem;
-			}
-		.information .main img {
-			max-width: 100%;
-			}
-		.information .main p {
-			margin-bottom: 3rem;
-			}
+.information .main {padding: 4rem 3rem;}
+		.information .main .image-container {margin-bottom: 4rem;}
+		.information .main img {max-width: 100%;}
+		.information .main p {margin-bottom: 3rem;}
 
 	.information article {
 		display: flex;
 		align-items: center;
 		padding: 2rem;
 		}
-		.information article:first-child {
-			padding-top: 4rem;
-			}
-		.information article:last-child {
-			background-color: rgb(216,216,216);
-			}
+		.information article:first-child {padding-top: 4rem;}
+		.information article:last-child {background-color: rgb(216,216,216);}
+		
 		.information article .image-container {
 			margin-right: 2rem;
 			width: 35%;
 			}
-			.article-img {
-				max-width: 100%;
-				}
-		.information article .details {
-			width: 65%;
-			}
+			.article-img {max-width: 100%;}
+
+		.information article .details {width: 65%;}
+
 		.information article .cta,
-		.information article p {
-			margin-bottom: 1rem;
-			}
+		.information article p {margin-bottom: 1rem;}
+
 		.information article a {
 			color: rgb(56, 182, 238);
 			text-decoration: none;
 			transition: color 100ms ease-in;
 			}
-			.information article a:hover {
-				color: rgb(17, 144, 200);
-				}
+			.information article a:hover {color: rgb(17, 144, 200);}
 
 /*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
-	.information article {
-		flex-direction: column;
-		}
-		.information article:first-child {
-			padding-top: 4rem;
-			}
+	.information article {flex-direction: column;}
+		.information article:first-child {padding-top: 4rem;}
 		.information article:last-child {
 			background-color: rgb(255, 255, 255);
 			padding-bottom: 4rem;
 			}
+
 		.information article .image-container {
 			margin: 0 0 2rem 0;
 			width: 100%;
 			}
-		.information article .details {
-			width: 100%;
-			}
-			.information article .cta {
-			margin-bottom: 0;
-			}
+		.information article .details {width: 100%;}
+			.information article .cta {margin-bottom: 0;}
 	}
 
 /*********** MOBILE SPECIFIC ***********/
 @media only screen and (max-width: 470px) {
-	.information article {
-		padding: 1rem 2rem;
-		}
-		.information article:first-child {
-			padding-top: 2rem;
-			}
-	}
-	
+	.information article {padding: 1rem 2rem;}
+		.information article:first-child {padding-top: 2rem;}
+	}	
 
+
+/* ====================================== */
+/* ============== COURSES =============== */
+/* ====================================== */
+.courses {
+	background-color: rgb(234,235,236);
+	padding-bottom: 2rem;
+	}
+	.courses-heading {
+		padding: 4rem 0;
+		margin: 0;
+		text-align: center;
+		}
+	.courses .wrapper {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+		}
+	.courses article {
+		max-width: 25%;
+		padding: 0 2rem 2rem 2rem;
+		}
+	.courses .course-summary {
+		background-color: rgb(255, 255, 255);
+		padding: 2rem;
+		}
+	.courses img {max-width: 100%;}
+
+	.courses p.uppercase {margin-bottom: 1rem;}
+
+/*********** TABLET SPECIFIC ***********/
+@media only screen and (max-width: 767px) {
+	.courses article {max-width: 40%;}
+	}
+
+/*********** MOBILE SPECIFIC ***********/
+@media only screen and (max-width: 470px) {
+	.courses {background-color: rgb(255, 255, 255);}
+		.courses .wrapper {flex-direction: column;}
+		.courses article {max-width:100%;}
+		.courses .course-summary {background-color: rgb(234, 234, 234);}
+		.courses h3 {margin: 0;}
+	}
 
 /* ====================================== */
 /* ============== THESIS ================ */
 /* ====================================== */
-.thesis-heading {
-	padding-top: 4rem;
+.thesis h2 {
+	padding: 4rem 0;
 	margin: 0;
 	text-align: center;
 	}
-.thesis {
+.thesis .main {padding: 0 1rem 2rem 3rem;}
+	.thesis .main .video-container {margin-bottom: 3rem;}
+	.thesis .main video {max-width: 100%;}
+
+.thesis article {
 	display: flex;
+	align-items: center;
+	padding: 2rem;
 	}
-
-	.thesis .main {
-		padding: 4rem 1rem 2rem 3rem;
+	.thesis article:first-child {background-color: rgb(216,216,216);}
+	.thesis article .image-container {
+		margin-right: 2rem;
+		width: 35%;
 		}
-		.thesis .main .video-container {
-			margin-bottom: 3rem;
-			}
-		.thesis .main video {
-			max-width: 100%;
-			}
-
-	.thesis article {
-		display: flex;
-		align-items: center;
-		padding: 2rem;
-		}
-		.thesis article:first-child {
-			margin-top: 4rem;
-			background-color: rgb(216,216,216);
-			}
-		.thesis article .image-container {
-			margin-right: 2rem;
-			width: 35%;
-			}
-		.thesis article .details {
-			width: 65%;
-			}
+	.thesis article .details {width: 65%;}
 
 /*********** MOBILE SPECIFIC ***********/
 @media only screen and (max-width: 470px) {
-	.thesis .main {
-		padding: 4rem 0;
-		}
+	.thesis .main {padding: 4rem 0;}
 	}
 
 /* ====================================== */
@@ -333,9 +321,7 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	}
-	footer p {
-		font-size: 1.5rem;
-		}
+	footer p {font-size: 1.5rem;}
 
 @media only screen and (max-width: 470px) {
 	footer {justify-content: center;}
