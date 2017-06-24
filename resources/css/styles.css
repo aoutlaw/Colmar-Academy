@@ -205,13 +205,13 @@ nav.mobile {
 			margin-right: 2rem;
 			width: 35%;
 			}
-			.information article .image-container.guest {
+			/* .information article .image-container.guest {
 				background-image: url('../images/information-guest-lecture-mobile.jpg');
 				background-position: center;
 				background-size: cover;
 				background-repeat: no-repeat;
 				padding-bottom: 35%;
-				}
+				} */
 			.article-img {
 				max-width: 100%;
 				}
@@ -230,30 +230,60 @@ nav.mobile {
 			.information article a:hover {
 				color: rgb(17, 144, 200);
 				}
-	
-@media only screen and (max-width: 470px) {
+
+@media only screen and (max-width: 767px) {
 	.information article {
 		flex-direction: column;
-		padding: 0 2rem 2rem 2rem;
 		}
 		.information article:first-child {
-			padding-top: 2rem;
+			padding-top: 4rem;
 			}
 		.information article:last-child {
 			background-color: rgb(255, 255, 255);
+			padding-bottom: 4rem;
 			}
 		.information article .image-container {
-			margin: 0;
+			margin: 0 0 2rem 0;
 			width: 100%;
 			}
 		.information article .details {
 			width: 100%;
-			/* padding: 2rem 0; */
 			}
 			.information article .cta {
 			margin-bottom: 0;
 			}
-		/* YOU STOPPED HERE */
-		/* Which is better, background image or img tag? */
 	}
 	
+@media only screen and (max-width: 470px) {
+	.information article {
+		padding: 1rem 2rem;
+		}
+		.information article:first-child {
+			padding-top: 2rem;
+			}
+	}
+	
+
+
+
+
+
+
+
+
+/* ====================================== */
+/* ============== FOOTER ================ */
+/* ====================================== */
+footer {
+	padding: 2rem 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	}
+	footer p {
+		font-size: 1.5rem;
+		}
+
+@media only screen and (max-width: 470px) {
+	footer {justify-content: center;}
+	}
