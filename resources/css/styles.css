@@ -6,6 +6,7 @@ html {
 	color: rgb(74, 74, 74);
 	font-size: 8px;
 	}
+img {vertical-align: middle;}
 
 .container {
 	max-width: 1260px;
@@ -60,6 +61,7 @@ button {
 	transition: background-color 100ms ease-in;
 	border: none;
 	outline: none;
+	width: 80%;
 	}
 	button:hover {background-color: rgb(56, 182, 238);}
 	button:active {background-color: rgb(17,144,200);}
@@ -192,7 +194,7 @@ nav.mobile {
 
 	.information article {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		padding: 2rem;
 		}
 		.information article:first-child {padding-top: 4rem;}
