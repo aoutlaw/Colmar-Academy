@@ -205,13 +205,6 @@ nav.mobile {
 			margin-right: 2rem;
 			width: 35%;
 			}
-			/* .information article .image-container.guest {
-				background-image: url('../images/information-guest-lecture-mobile.jpg');
-				background-position: center;
-				background-size: cover;
-				background-repeat: no-repeat;
-				padding-bottom: 35%;
-				} */
 			.article-img {
 				max-width: 100%;
 				}
@@ -231,6 +224,7 @@ nav.mobile {
 				color: rgb(17, 144, 200);
 				}
 
+/*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
 	.information article {
 		flex-direction: column;
@@ -253,7 +247,8 @@ nav.mobile {
 			margin-bottom: 0;
 			}
 	}
-	
+
+/*********** MOBILE SPECIFIC ***********/
 @media only screen and (max-width: 470px) {
 	.information article {
 		padding: 1rem 2rem;
@@ -265,11 +260,51 @@ nav.mobile {
 	
 
 
+/* ====================================== */
+/* ============== THESIS ================ */
+/* ====================================== */
+.thesis-heading {
+	padding-top: 4rem;
+	margin: 0;
+	text-align: center;
+	}
+.thesis {
+	display: flex;
+	}
 
+	.thesis .main {
+		padding: 4rem 1rem 2rem 3rem;
+		}
+		.thesis .main .video-container {
+			margin-bottom: 3rem;
+			}
+		.thesis .main video {
+			max-width: 100%;
+			}
 
+	.thesis article {
+		display: flex;
+		align-items: center;
+		padding: 2rem;
+		}
+		.thesis article:first-child {
+			margin-top: 4rem;
+			background-color: rgb(216,216,216);
+			}
+		.thesis article .image-container {
+			margin-right: 2rem;
+			width: 35%;
+			}
+		.thesis article .details {
+			width: 65%;
+			}
 
-
-
+/*********** MOBILE SPECIFIC ***********/
+@media only screen and (max-width: 470px) {
+	.thesis .main {
+		padding: 4rem 0;
+		}
+	}
 
 /* ====================================== */
 /* ============== FOOTER ================ */
