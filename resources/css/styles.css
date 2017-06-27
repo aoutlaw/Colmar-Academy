@@ -45,6 +45,7 @@ h3 {
 	font-weight: 700;
 	margin-bottom: 1rem;
 	}
+h6 {font-weight: 400;}
 
 p {
 	font-size: 2rem;
@@ -53,8 +54,8 @@ p {
 
 button {
 	margin: 3rem 0;
-	padding: 1rem 4rem;
-	background-color: rgb(74, 74, 74);
+	padding: 2rem 4rem;
+	background-color: rgb(56, 182, 238);
 	color: rgb(255, 255, 255);
 	font-size: 2rem;
 	text-align: center;
@@ -63,8 +64,11 @@ button {
 	outline: none;
 	width: 80%;
 	}
-	button:hover {background-color: rgb(56, 182, 238);}
-	button:active {background-color: rgb(17,144,200);}
+	button:hover {
+		background-color: rgb(17,144,200);
+		cursor: pointer;
+		}
+	button:active {background-color: rgb(10,124,180);}
 
 /*********** DESKTOP SPECIFIC ***********/
 @media only screen and (min-width: 768px) {
@@ -84,6 +88,9 @@ button {
 /* ====================================== */
 /* ================ HEADING ============= */
 /* ====================================== */
+.heading-parent {
+	/* ??? I want to make this a fixed position header but position:fixed and flexbox aren't playing well together at all */
+	}
 heading {
 	height: 8rem;
 	padding: 0 3rem;
@@ -266,14 +273,26 @@ nav.mobile {
 	.courses .course-summary {
 		background-color: rgb(255, 255, 255);
 		padding: 2rem;
+		height: 18rem;
+		overflow: hidden;
 		}
 	.courses img {max-width: 100%;}
 
 	.courses p.uppercase {margin-bottom: 1rem;}
 
+
+@media only screen and (max-width: 999px) {
+	.courses .course-summary {height: 22rem}
+	}
+
 /*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
 	.courses article {max-width: 40%;}
+	}
+
+/* ????? There has to be a better way to set the height in a fluid way */
+@media only screen and (max-width: 539px) {
+	.courses .course-summary {height: 24rem;}
 	}
 
 /*********** MOBILE SPECIFIC ***********/
