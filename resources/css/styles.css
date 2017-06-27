@@ -24,10 +24,12 @@ img {vertical-align: middle;}
 
 .uppercase {text-transform: uppercase;}
 .bold {font-weight: 900;}
+.gray {color: rgb(74, 74, 74)}
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	line-height: 1.2;
+	color: rgb(80, 137, 145);
 	}
 h1 {
 	font-size: 6rem;
@@ -51,11 +53,17 @@ p {
 	font-size: 2rem;
 	line-height: 1.5;
 	}
+/*********** TABLET SPECIFIC ***********/
+@media only screen and (max-width: 767px) {
+	h1 {font-size: 4rem;}
+	h2 {font-size: 3rem;}
+	h3 {font-size: 2.5rem;} 
+	}
 
 button {
 	margin: 3rem 0;
 	padding: 2rem 4rem;
-	background-color: rgb(56, 182, 238);
+	background-color: rgb(23, 42, 58);
 	color: rgb(255, 255, 255);
 	font-size: 2rem;
 	text-align: center;
@@ -176,7 +184,7 @@ nav.mobile {
 
 /*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
-	.hero .message h1 {font-size:  5rem;}
+	.hero .message h1 {font-size:  4rem;}
 	.hero .message p {font-size: 2rem;}
 	}
 
@@ -218,12 +226,20 @@ nav.mobile {
 		.information article .cta,
 		.information article p {margin-bottom: 1rem;}
 
+		.information article .cta {padding-top: 2rem;}
+
 		.information article a {
-			color: rgb(56, 182, 238);
+			color: rgb(23, 42, 58);
+			border: 1px solid rgb(23, 42, 58);
+			padding: 1rem 2rem;
+			border-radius: 2rem;
 			text-decoration: none;
 			transition: color 100ms ease-in;
 			}
-			.information article a:hover {color: rgb(17, 144, 200);}
+			.information article a:hover {
+				color: rgb(17, 144, 200);
+				border: 1px solid rgb(17, 144, 200);
+				}
 
 /*********** TABLET SPECIFIC ***********/
 @media only screen and (max-width: 767px) {
@@ -239,7 +255,16 @@ nav.mobile {
 			width: 100%;
 			}
 		.information article .details {width: 100%;}
-			.information article .cta {margin-bottom: 0;}
+			.information article .cta {
+				margin-bottom: 0;
+				padding-top: 0;
+				}
+
+		.information article a,
+		.information article a:hover {
+			border: none;
+			padding: 0;
+			}
 	}
 
 /*********** MOBILE SPECIFIC ***********/
