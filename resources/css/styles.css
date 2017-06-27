@@ -300,7 +300,10 @@ nav.mobile {
 	.courses {background-color: rgb(255, 255, 255);}
 		.courses .wrapper {flex-direction: column;}
 		.courses article {max-width:100%;}
-		.courses .course-summary {background-color: rgb(234, 234, 234);}
+		.courses .course-summary {
+			background-color: rgb(234, 234, 234);
+			height: auto;
+			}
 		.courses h3 {margin: 0;}
 	}
 
